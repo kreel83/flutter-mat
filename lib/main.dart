@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_app/views/home_page.dart';
 import 'player_page.dart';
+import './views/articles.dart';
 
 void main() {
   runApp(MyApp());
@@ -82,7 +83,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
               Icons.more_vert,
               color: Colors.black,
             ),
-            onPressed: null
+            onPressed: ()  {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => ArticlesPage()
+                    )
+                );
+            }
           )
         ],
       );
